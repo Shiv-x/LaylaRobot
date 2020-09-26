@@ -28,7 +28,7 @@ You can find my list of available commands with /help.
 
 im a group manager bot maintained by @GarimaQueen
 
-My future updates will be put into This Channel - @UPSTOCKWORLD.
+My Source code [clicking here](https://github.com/QueenArzoo/JassicaRobot.git).
 
 For more commands click /help...
 
@@ -159,12 +159,9 @@ def start(update: Update, context: CallbackContext):
                     escape_markdown(context.bot.first_name), SUPPORT_CHAT),
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton(
-                        text="Add Jassica to your group",
-                        url="t.me/{}?startgroup=true".format(
-                            context.bot.username))
-                ]]))
+                reply_markup=InlineKeyboardMarkup([
+                  [InlineKeyboardButton(text="Add Jassica to your group", url="t.me/{}?startgroup=true".format(context.bot.username))],
+                  [InlineKeyboardButton(text="Source Code", url="https://github.com/QueenArzoo/JassicaRobot.git")]]))
     else:
         update.effective_message.reply_text("Yo, whadup?")
 
