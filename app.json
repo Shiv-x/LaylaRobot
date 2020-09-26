@@ -103,7 +103,7 @@
       "TOKEN": {
          "description": "Your bot token.",
          "required": true,
-         "value": "1275607746:AAGhZlxQAv-ngxteGSjA83w3XT--X8gGYg0"
+         "value": "1275607746:AAHrFB3V9HxLmUV57qrBlZ_5gcX-Q01JCbo"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: @MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
