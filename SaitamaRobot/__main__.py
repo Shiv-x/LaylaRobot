@@ -28,10 +28,6 @@ You can find my list of available commands with /help.
 
 im a group manager bot maintained by @GarimaQueen
 
-My Source code [clicking here](https://github.com/QueenArzoo/JassicaRobot.git).
-
-For more commands click /help...
-
 """
 
 HELP_STRINGS = """
@@ -53,7 +49,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://images2.alphacoders.com/275/275372.png"
+SAITAMA_IMG = "https://images.alphacoders.com/679/679719.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
