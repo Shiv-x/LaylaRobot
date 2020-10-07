@@ -16,7 +16,6 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from telethon import events
-from SaitamaRobot import tbot
 
 
 def register(**args):
