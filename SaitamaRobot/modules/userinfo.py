@@ -161,7 +161,7 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "Bios and Abouts"
+__mod_name__ = "Info"
 __command_list__ = ["setbio", "bio", "setme", "me"]
 __handlers__ = [
     SET_BIO_HANDLER, GET_BIO_HANDLER, SET_ABOUT_HANDLER, GET_ABOUT_HANDLER
