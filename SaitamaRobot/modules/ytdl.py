@@ -12,7 +12,7 @@ from asyncio import sleep
 from telethon.tl.types import DocumentAttributeAudio
 from collections import deque
 from googleapiclient.discovery import build
-from SaitamaRobot.saitamabot import register
+from SaitamaRobot.saitamabot import saitama
 from SaitamaRobot import YOUTUBE_API_KEY
 from html import unescape
 import requests
