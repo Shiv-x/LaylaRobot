@@ -26,3 +26,5 @@ spamwatch
 alphabet_detector
 tswift
 instantmusic
+youtube.dl
+google-api-python-client
