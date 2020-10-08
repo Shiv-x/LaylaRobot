@@ -1,6 +1,6 @@
 """do `.song <song keyword>`"""
 
-from telethon import saitamabot
+from telethon import events
 import subprocess
 from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
 import io
