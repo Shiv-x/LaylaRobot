@@ -27,4 +27,5 @@ alphabet_detector
 tswift
 instantmusic
 youtube.dl
+BeautifulSoup4
 google-api-python-client
