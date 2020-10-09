@@ -26,6 +26,6 @@ spamwatch
 alphabet_detector
 tswift
 instantmusic
-youtube.dl
+youtube-dl
 BeautifulSoup4
 google-api-python-client
