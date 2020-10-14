@@ -1,4 +1,4 @@
-![Saitama](https://images6.alphacoders.com/428/428892.jpg)
+![Jassica](https://images.alphacoders.com/679/679719.jpg)
 # Jassica Robot 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/QueenArzoo/JassicaRobot.git)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
@@ -8,12 +8,6 @@ A modular Telegram Python bot running on python3 with a sqlalchemy database.
 
 ## How to setup/deploy.
 
-### Read these notes carefully before proceeding 
- - Edit any mentions of @OnePunchSupport to your own support chat. 
- - We do not support forks, once you fork the bot and deploy the headache of bugs and support is your own, please do not come to our support chat asking technical help.
- - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot. [See this](https://github.com/AnimeKaizoku/SaitamaRobot/blob/shiken/SaitamaRobot/__main__.py#L25)
- - If you come to our support chat on Telegram asking help about a "fork" or a technical issue with a module, you will end up getting ignored or banned. 
- - Lastly, if you are found to run this repo without the code being open sourced or the repository link not mentioned in the bot, we will push a gban for you in our network because of being in violation of the license, you are free to be a dick and not respect the open source code (we do not mind) but we will not be having you around our chats.
 
 
 <details>
@@ -29,8 +23,6 @@ Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.co
 </details>  
 <details>
   <summary>Steps to self Host!! </summary>
-
-Note: This instruction set is just a copy-paste from Marie, note that [One Punch Support](https://t.me/OnePunchSupport) aims to handle support for @SaitamaRobot and not how to set up your own fork. If you find this bit confusing/tough to understand then we recommend you ask a dev, kindly avoid asking how to set up the bot instance in the support chat, it aims to help our own instance of the bot and not the forks.
 
   ## Setting up the bot (Read this before trying to use!):
 Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older Python versions!
