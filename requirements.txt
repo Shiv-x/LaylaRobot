@@ -30,3 +30,5 @@ youtube-dl
 ffmpeg
 BeautifulSoup4
 google-api-python-client
+instantmusic
+subprocess
