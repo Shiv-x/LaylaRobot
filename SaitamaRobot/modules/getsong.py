@@ -4,7 +4,6 @@
 from telethon import events
 import asyncio
 from SaitamaRobot.saitamabot import saitama
-from SaitamaRobot import bot, CMD_HELP
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import os
