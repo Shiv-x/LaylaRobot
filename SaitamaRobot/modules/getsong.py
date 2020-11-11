@@ -3,8 +3,8 @@
 
 from telethon import events
 import asyncio
-from userbot.events import register 
-from userbot import bot, CMD_HELP
+from SaitamaRobot.saitamabot import saitama
+from SaitamaRobot import bot, CMD_HELP
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import os
