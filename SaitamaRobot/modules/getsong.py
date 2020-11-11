@@ -22,7 +22,7 @@ def bruh(name):
 
     os.system("instantmusic -q -s "+name)
 
-@saitama(outgoing=True, pattern="^.getsong(?: |$)(.*)")
+@saitama(outgoing=True, pattern="^/music(?: |$)(.*)")
 async def getmusic(so):
     if so.fwd_from:
         return
