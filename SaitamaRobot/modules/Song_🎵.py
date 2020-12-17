@@ -1,4 +1,3 @@
-from SaitamaRobot import CMD_HELP
 import time
 import os
 import json
