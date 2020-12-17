@@ -300,10 +300,3 @@ __help__ = """
  - /lyrics <songname artist(optional)>: sends the complete lyrics of the song provided as input
  
 """
-
-CMD_HELP.update({
-    file_helpo: [
-        file_helpo,
-        __help__
-    ]
-})
