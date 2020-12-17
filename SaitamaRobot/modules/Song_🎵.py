@@ -43,9 +43,6 @@ JULIAVSONG = "@MissJuliaRobotMP4"
 
 @saitama(pattern="^/song (.*)")
 async def download_song(v_url):
-    for ch in approved_userss:
-        iid = ch['id']
-        userss = ch['user']
     if v_url.is_group:
         if (await is_register_admin(v_url.input_chat, v_url.message.sender_id)):
             pass
