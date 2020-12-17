@@ -10,7 +10,6 @@ from youtube_dl.utils import (DownloadError, ContentTooShortError,
                               MaxDownloadsReached, PostProcessingError,
                               UnavailableVideoError, XAttrMetadataError)
 
-from SaitamaRobot import tbot
 from telethon import types
 from telethon.tl import functions
 from SaitamaRobot.saitamabot import saitama
