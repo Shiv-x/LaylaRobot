@@ -149,10 +149,6 @@ async def download_song(v_url):
 
 @saitama(pattern="^/video (.*)")
 async def download_video(v_url):
-    approved_userss = approved_users.find({})
-    for ch in approved_userss:
-        iid = ch['id']
-        userss = ch['user']
     if v_url.is_group:
         if (await is_register_admin(v_url.input_chat, v_url.message.sender_id)):
             pass
@@ -251,10 +247,6 @@ async def download_video(v_url):
 
 @saitama(pattern="^/lyrics ?(.*)")
 async def download_lyrics(v_url):
-    approved_userss = approved_users.find({})
-    for ch in approved_userss:
-        iid = ch['id']
-        userss = ch['user']
     if v_url.is_group:
         if (await is_register_admin(v_url.input_chat, v_url.message.sender_id)):
             pass
