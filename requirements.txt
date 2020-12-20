@@ -32,3 +32,4 @@ BeautifulSoup4
 google-api-python-client
 instantmusic
 youtube-search-python
+redis
