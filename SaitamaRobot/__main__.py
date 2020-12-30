@@ -22,11 +22,11 @@ from telegram.utils.helpers import escape_markdown
 
 PM_START_TEXT = """
 
-Hi {}, my name is {}! 
-I am an Anime themed group management bot.
-You can find my list of available commands with /help.
+Hi {},How Are You! 
 
-i'm a group manager bot. Maintained by @GarimaQueen
+
+
+
 
 """
 
@@ -34,26 +34,21 @@ HELP_STRINGS = """
 Hey there! My name is *{}*.
 
 *Main* commands available:
- • /start: start the bot
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information about how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+
+
 
 
 {}
-And the following:
+My Boss Sammy:
 """.format(
     dispatcher.bot.first_name, ""
-    if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+    if not ALLOW_EXCL else "\nMy Commans/ or !.\n")
 
-SAITAMA_IMG = "https://images.alphacoders.com/679/679719.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/88d5f5b2e733c3099d122.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars)."""
+You can donate to the original writer of the Base code, Sammy
+There are two ways of supporting him; [PayPal](paypal.me/MrSammy07)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -156,10 +151,10 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                  [InlineKeyboardButton(text="👸 Add Jassica to your group", url="t.me/{}?startgroup=true".format(context.bot.username))],
-                  [InlineKeyboardButton(text="Source Code", url="https://github.com/QueenArzoo/ElisaRobot"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")]]))
+                  [InlineKeyboardButton(text="Logos Design", url="https://t.me/SexyGraphics))],
+                  [InlineKeyboardButton(text="My Boss Info", url="https://t.me/Mercyinfo"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")]]))
     else:
-        update.effective_message.reply_text("Yo, whadup?")
+        update.effective_message.reply_text("Yes Boss")
 
 
 # for test purposes
