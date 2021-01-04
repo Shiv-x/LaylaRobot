@@ -6,7 +6,6 @@ import spamwatch
 
 import telegram.ext as tg
 from telethon import TelegramClient
-from redis import StrictRedis
 
 StartTime = time.time()
 
@@ -36,39 +35,36 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    MESSAGE_DUMP = os.environ.get('MESSAGE_DUMP', None)
+    JOIN_LOGGER = os.environ.get('JOIN_LOGGER', None)
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
-        SUDO_USERS = set(
-            int(x) for x in os.environ.get("SUDO_USERS", "").split())
+        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
         DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
         raise Exception(
             "Your sudo or dev users list does not contain valid integers.")
 
     try:
-        SUPPORT_USERS = set(
-            int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
+        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
     except ValueError:
         raise Exception(
             "Your support users list does not contain valid integers.")
 
     try:
-        WHITELIST_USERS = set(
-            int(x) for x in os.environ.get("WHITELIST_USERS", "").split())
+        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
     except ValueError:
         raise Exception(
             "Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGER_USERS = set(
-            int(x) for x in os.environ.get("TIGER_USERS", "").split())
+        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
     except ValueError:
         raise Exception(
             "Your tiger users list does not contain valid integers.")
 
-    GBAN_LOGS = os.environ.get('GBAN_LOGS', None)
+    INFOPIC = bool(os.environ.get('INFOPIC', False))
+    EVENT_LOGS = os.environ.get('EVENT_LOGS', None)
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
     URL = os.environ.get('URL', "")  # Does not contain token
     PORT = int(os.environ.get('PORT', 5000))
@@ -93,7 +89,6 @@ if ENV:
     SUPPORT_CHAT = os.environ.get('SUPPORT_CHAT', None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get('SPAMWATCH_SUPPORT_CHAT', None)
     SPAMWATCH_API = os.environ.get('SPAMWATCH_API', None)
-    REDIS_URL = os.environ.get('REDIS_URL', None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
@@ -103,42 +98,42 @@ if ENV:
 
 else:
     from SaitamaRobot.config import Development as Config
-    TOKEN = Config.API_KEY
+    TOKEN = Config.TOKEN
 
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
 
-    MESSAGE_DUMP = Config.MESSAGE_DUMP
+    JOIN_LOGGER = Config.JOIN_LOGGER
     OWNER_USERNAME = Config.OWNER_USERNAME
 
     try:
-        SUDO_USERS = set(int(x) for x in Config.SUDO_USERS or [])
+        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
         raise Exception(
             "Your sudo or dev users list does not contain valid integers.")
 
     try:
-        SUPPORT_USERS = set(int(x) for x in Config.SUPPORT_USERS or [])
+        DEMONS = set(int(x) for x in Config.DEMONS or [])
     except ValueError:
         raise Exception(
             "Your support users list does not contain valid integers.")
 
     try:
-        WHITELIST_USERS = set(int(x) for x in Config.WHITELIST_USERS or [])
+        WOLVES = set(int(x) for x in Config.WOLVES or [])
     except ValueError:
         raise Exception(
             "Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGER_USERS = set(int(x) for x in Config.TIGER_USERS or [])
+        TIGERS = set(int(x) for x in Config.TIGERS or [])
     except ValueError:
         raise Exception(
             "Your tiger users list does not contain valid integers.")
 
-    GBAN_LOGS = Config.GBAN_LOGS
+    EVENT_LOGS = Config.EVENT_LOGS
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL
     PORT = Config.PORT
@@ -162,6 +157,7 @@ else:
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
+    INFOPIC = Config.INFOPIC
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
@@ -169,7 +165,7 @@ else:
         raise Exception(
             "Your blacklisted chats list does not contain valid integers.")
 
-SUDO_USERS.add(OWNER_ID)
+DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 
 if not SPAMWATCH_API:
@@ -178,27 +174,15 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
-
-REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
-try:
-    REDIS.ping()
-    LOGGER.info("Your redis server is now alive!")
-except BaseException:
-    raise Exception("Your redis server is not alive, please check again.")
-
-
-api_id = API_ID
-api_hash = API_HASH
-
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
 dispatcher = updater.dispatcher
 
-SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
+DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
-WHITELIST_USERS = list(WHITELIST_USERS)
-SUPPORT_USERS = list(SUPPORT_USERS)
-TIGER_USERS = list(TIGER_USERS)
+WOLVES = list(WOLVES)
+DEMONS = list(DEMONS)
+TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
 from SaitamaRobot.modules.helper_funcs.handlers import (CustomCommandHandler,
