@@ -16,12 +16,12 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org - this is used for telethon based modules.",
          "required": true,
-         "value": "1272115"
+         "value": ""
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org - this is used for telethon based modules.",
          "required": true,
-         "value": "f0f83c2fcef971f87561229e9097520e"
+         "value": ""
       },
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
@@ -40,7 +40,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
          "required": false,
-         "value": "https://www.paypal.me/PaulSonOfLars"
+         "value": "https://t.me/GarimaQueen"
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
@@ -53,20 +53,20 @@
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
-         "value": "1200780834"
+         "value": ""
       },
       "OWNER_USERNAME": {
          "description": "Your username",
-         "value": "ArzooOfficial"
+         "value": ""
       },
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.)",
          "required": false,
-         "value": "1049081438 1089434386 797768146"
+         "value": ""
       },
       "GBAN_LOGS": {
          "description": "Gban log channel, include the hyphen too: ex: -123456",
-         "value": "-1001308489311"
+         "value": ""
       },
       "CASH_API_KEY": {
          "description": "Required for currency converter",
@@ -88,12 +88,12 @@
       "SUDO_USERS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "1049081438 1089434386 797768146"
+         "value": ""
       },
       "SUPPORT_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": "1200780834"
+         "value": ""
       },
       "TIGER_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
@@ -103,7 +103,7 @@
       "TOKEN": {
          "description": "Your bot token.",
          "required": true,
-         "value": "1275607746:AAHrFB3V9HxLmUV57qrBlZ_5gcX-Q01JCbo"
+         "value": ""
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: @MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
