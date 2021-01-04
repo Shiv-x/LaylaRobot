@@ -1,6 +1,6 @@
 from functools import wraps
 
-from SaitamaRobot import (DEL_CMDS, DEV_USERS, SUDO_USERS, SUPPORT_CHAT,
+from SaitamaRobot import (DEL_CMDS, DEV_USERS, SUPPORT_CHAT,
                           SUPPORT_USERS, TIGER_USERS, WHITELIST_USERS,
                           dispatcher)
 from telegram import Chat, ChatMember, ParseMode, Update
