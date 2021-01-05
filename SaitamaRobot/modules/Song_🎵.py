@@ -288,3 +288,4 @@ __help__ = """
  - /lyrics <songname artist(optional)>: sends the complete lyrics of the song provided as input
  
 """
+__mod_name__ = "Music"
