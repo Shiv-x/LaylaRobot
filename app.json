@@ -70,10 +70,12 @@
       },
       "CASH_API_KEY": {
          "description": "Required for currency converter",
+         "required": false,
          "value": "-xyz"
       },
       "TIME_API_KEY": {
          "description": "Required for timezone information",
+         "required": false,
          "value": "-xyz"
       },
       "PORT": {
@@ -108,7 +110,7 @@
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: @MyGroupChatUsernameBlah. If this ever points to saitama support than consider you made an enemy.",
          "required": true,
-         "value": "@Tinder_Queens"
+         "value": "@Girls_and_Boys_Chatting"
       },   
       "URL": {
          "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
