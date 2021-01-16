@@ -184,4 +184,4 @@ dispatcher.add_handler(GDMORNING_HANDLER)
 dispatcher.add_handler(GDNIGHT_HANDLER)
 
 #this line should not be removed! or else a opt will be created !! Taken from saitaima and preven's repo and contributed here! those things which are not given here are either
-tested not working or logs error in this repo !
+#tested not working or logs error in this repo !
