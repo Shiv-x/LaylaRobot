@@ -10,7 +10,7 @@ from telegram.utils.helpers import escape_markdown
 from SaitamaRobot.modules.helper_funcs.extraction import extract_user
 from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
 from SaitamaRobot.modules.helper_funcs.alternate import typing_action
-from SaitamaRobot import dispatcher, DRAGONS, DEMONS, LOGGER
+from SaitamaRobot import dispatcher, LOGGER, TIGER_USERS
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 
 import SaitamaRobot.modules.helper_funcs.string_store as fun
