@@ -34,7 +34,7 @@ UNBAN_RIGHTS = ChatBannedRights(
     embed_links=None,
 )
 
-OFFICERS = [OWNER_ID] + DEV_USERS + DRAGONS + DEMONS
+OFFICERS = [OWNER_ID] + DEV_USERS + SUDO_USERS
 
 # Check if user has admin rights
 async def is_administrator(user_id: int, message):
