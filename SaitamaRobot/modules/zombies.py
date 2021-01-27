@@ -1,4 +1,3 @@
-
 import asyncio
 from asyncio import sleep
 
@@ -7,7 +6,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
-from SaitamaRobot import saitamabot, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS
+from SaitamaRobot import telethn, OWNER_ID, DEV_USERS, SUDO_USERS
 
 # =================== CONSTANT ===================
 
@@ -35,12 +34,12 @@ UNBAN_RIGHTS = ChatBannedRights(
     embed_links=None,
 )
 
-OFFICERS = [OWNER_ID] + DEV_USERS + SUDO_USERS + SUPPORT_USERS
+OFFICERS = [OWNER_ID] + DEV_USERS + DRAGONS + DEMONS
 
 # Check if user has admin rights
 async def is_administrator(user_id: int, message):
     admin = False
-    async for user in saitama.iter_participants(
+    async for user in telethn.iter_participants(
         message.chat_id, filter=ChannelParticipantsAdmins
     ):
         if user_id == user.id or user_id in OFFICERS:
@@ -50,7 +49,7 @@ async def is_administrator(user_id: int, message):
 
 
 
-@saitama.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
+@telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
 async def zombies(event):
     """ For .zombies command, list all the zombies in a chat. """
 
@@ -112,5 +111,3 @@ async def zombies(event):
         \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
 
     await cleaning_zombies.edit(del_status)
-
-    
