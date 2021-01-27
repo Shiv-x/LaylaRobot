@@ -7,7 +7,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
-from SaitamaRobot import saitama, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS
+from SaitamaRobot import saitamabot, OWNER_ID, DEV_USERS, SUDO_USERS, SUPPORT_USERS
 
 # =================== CONSTANT ===================
 
