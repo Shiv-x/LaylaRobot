@@ -26,7 +26,7 @@ Hi {}, my name is {}!
 I am an Anime themed group management bot.
 You can find my list of available commands with /help.
 
-i'm a group manager bot. Maintained by @GarimaQueen
+i'm a group manager bot. Maintained by @HEROGAMERS1
 
 """
 
@@ -52,8 +52,7 @@ And the following:
 SAITAMA_IMG = "https://images.alphacoders.com/679/679719.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars)."""
+Supporting him; [Hero](t.me/HEROGAMERS1)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
