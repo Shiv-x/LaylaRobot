@@ -1,3 +1,4 @@
 @echo off
 TITLE Saitama Robot
-env\scripts\activate.bat && py -m SaitamaRobot
+:: Enables virtual env mode and then starts saitama
+env\scripts\activate.bat && py -m LaylaRobot
