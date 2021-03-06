@@ -1,14 +1,14 @@
 import html
 
-from SaitamaRobot import SUDO_USERS, dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
-from SaitamaRobot.modules.helper_funcs.chat_status import (bot_admin, can_pin,
+from LaylaRobot import SUDO_USERS, dispatcher
+from LaylaRobot.modules.disable import DisableAbleCommandHandler
+from LaylaRobot.modules.helper_funcs.chat_status import (bot_admin, can_pin,
                                                            can_promote,
                                                            connection_status,
                                                            user_admin)
-from SaitamaRobot.modules.helper_funcs.extraction import (extract_user,
+from LaylaRobot.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
-from SaitamaRobot.modules.log_channel import loggable
+from LaylaRobot.modules.log_channel import loggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
