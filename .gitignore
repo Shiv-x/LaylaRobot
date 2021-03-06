@@ -1,7 +1,7 @@
-SaitamaRobot/config.py
-SaitamaRobot/*.session
-SaitamaRobot/*.session-journal
-SaitamaRobot/config.ini
+LaylaRobot/config.py
+LaylaRobot/*.session
+LaylaRobot/*.session-journal
+LaylaRobot/config.ini
 log.txt
 *.pyc
 .idea/
@@ -9,8 +9,8 @@ log.txt
 .pydevproject
 .directory
 .vscode
-SaitamaRobot/modules/helper_funcs/temp.txt
-SaitamaRobot/elevated_users.json
+LaylaRobot/modules/helper_funcs/temp.txt
+LaylaRobot/elevated_users.json
 start-3.6.bat
 *.session
 kangsticker.png
