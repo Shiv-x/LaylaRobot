@@ -1,4 +1,4 @@
-from SaitamaRobot import LOAD, LOGGER, NO_LOAD
+from LaylaRobot import LOAD, LOGGER, NO_LOAD
 
 
 def __list_all_modules():
