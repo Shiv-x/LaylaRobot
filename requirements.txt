@@ -44,3 +44,4 @@ validators
 gtts
 nekos.py
 TgCrypto
+sqlalchemy==1.3.20
