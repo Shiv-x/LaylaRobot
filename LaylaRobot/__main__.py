@@ -54,7 +54,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hi {}, my name is {}! 
 You can find my list of available commands with /help.
-i'm a group manager bot. Maintained by @HEROGAMERS1 ❤
+i'm a group manager bot. Maintained by @RYAN_HERE ❤
 
 """
 
@@ -76,10 +76,10 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/524b78577a42b02b2f074.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/6c4d93106b51c49b25f01.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Supporting him; [Hero](t.me/HEROGAMERS1)"""
+Supporting him; [RYAN](t.me/RYAN_HERE)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -197,17 +197,17 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="👰 Add 𝙇𝙖𝙮𝙡𝙖 to your group",
+                            text="🙍‍♂ Add 𝙍𝙔𝘼𝙉 𝙊𝙋 to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="Support Group",
-                             url=f"https://t.me/Girls_and_Boys_Chatting"),
+                             url=f"https://t.me/COLONY_OF_WEIRDOS_2"),
                          InlineKeyboardButton(
                              text="📘 Logs",
-                             url="https://t.me/LaylaLogs")
+                             url="https://t.me/RYANOP_LOGS")
                      ],
                      [
                          InlineKeyboardButton(
