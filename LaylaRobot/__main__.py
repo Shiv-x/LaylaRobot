@@ -5,14 +5,14 @@ import re
 from sys import argv
 from typing import Optional
 
-from LaylaRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from RyanRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           dispatcher, StartTime, telethn, updater)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from LaylaRobot.modules import ALL_MODULES
-from LaylaRobot.modules.helper_funcs.chat_status import is_user_admin
-from LaylaRobot.modules.helper_funcs.misc import paginate_modules
+from RyanRobot.modules import ALL_MODULES
+from RyanRobot.modules.helper_funcs.chat_status import is_user_admin
+from RyanRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -54,7 +54,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hi {}, my name is {}! 
 You can find my list of available commands with /help.
-i'm a group manager bot. Maintained by @HEROGAMERS1 ❤
+i'm a group manager bot. Maintained by @RYAN_HERE ❤
 
 """
 
@@ -76,10 +76,10 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/524b78577a42b02b2f074.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/6c4d93106b51c49b25f01.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Supporting him; [Hero](t.me/HEROGAMERS1)"""
+Supporting him; [RYAN](t.me/RYAN_HERE)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -92,7 +92,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("LaylaRobot.modules." +
+    imported_module = importlib.import_module("RyanRobot.modules." +
                                               module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
@@ -197,22 +197,22 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="👰 Add 𝙇𝙖𝙮𝙡𝙖 to your group",
+                            text="🙍‍♂ Add 𝙍𝙔𝘼𝙉 𝙊𝙋 to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="Support Group",
-                             url=f"https://t.me/Girls_and_Boys_Chatting"),
+                             url=f"https://t.me/COLONY_OF_WEIRDOS_2"),
                          InlineKeyboardButton(
                              text="📘 Logs",
-                             url="https://t.me/LaylaLogs")
+                             url="https://t.me/RYANOP_LOGS")
                      ],
                      [
                          InlineKeyboardButton(
                              text="☑️ Source code",
-                             url="https://github.com/QueenArzoo/LaylaRobot")
+                             url="WORKING IN PROGRESS......")
                      ]]))
     else:
         update.effective_message.reply_text(
