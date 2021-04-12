@@ -40,13 +40,13 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ of our @{channel} Join the channel and press the 'UnMute Me' button again.",
+                        text=f"❗@ {channel} kanalıvıza qoşulun və 'Səsimi Aç' düyməsini yenidən basın.",
                         show_alert=True,
                     )
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Admin has muted you for some other reason.",
+                    text="❗ Admin başqa bir səbəbə görə səssizləşdirdi.",
                     show_alert=True,
                 )
         else:
@@ -56,13 +56,13 @@ def _onUnMuteRequest(client, cb):
             ):
                 client.send_message(
                     chat_id,
-                    f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__",
+                    f"❗ **{cb.from_user.mention} özünü səssizləşdirməyə çalışır, amma səsini aça bilmirəm, çünki bu söhbətdə admin deyiləm, məni yenidən admin et.**\n__#bu sohbeti tərk edirəm...__",
                 )
 
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="Warning: Do not click the button when you can talk.",
+                    text="Xəbərdarlıq: Danışa bildiyiniz zaman düyməni basmayın.",
                     show_alert=True,
                 )
 
@@ -84,7 +84,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Welcome {} 🙏 \n \n **You are ours @{} Channel Not joined yet** 😭 \n Please do that Join At the bottom **UNMUTE ME** Button Touch it. \n \n **[👉 OUR CHANNEL 👈](https://t.me/{})**".format(
+                        "Xoş gəldin {} 🙏 \n \n **Siz bizimsiniz @{} *Kanal hələ qoşulmayıb* 😭 \n Xahiş edirəm altındakı Qoşulmağı edin**UNMUTE ME** Düyməsinə toxunun. \n \n **[👉 Sizin Kanal 👈](https://t.me/{})**".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -103,13 +103,13 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ **I am in this Admin Not at all..**\n__to me Ban Permissions With Admin Give it a try again .. \n#Ending FSub...__"
+                        "❗ **Bu Admindəyəm qətiyyən deyil .. ** \ n__Mənə Adminlə İcazələri qadağan et Yenidən cəhd edin \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"❗ **I am @{channel} In one Admin Not at all.**\n__I have it Admin Deela back Add .\n#Leaving this chat...__",
+                    text=f"❗ **Menim @{channel} Bir Admində Heç Yoxdur. ** \ n__Mən Admin Deela'yı geri əlavə et.\n#Leaving this chat...__",
                 )
 
 
@@ -123,7 +123,7 @@ def config(client, message):
             input_str = input_str.replace("@", "")
             if input_str.lower() in ("off", "no", "disable"):
                 sql.disapprove(chat_id)
-                message.reply_text("❌ **Force Subscribe is Disabled Successfully.**")
+                message.reply_text("❌ **Force Abunə Olunsa Uğursuzdur.**")
             elif input_str.lower() in ("clear"):
                 sent_message = message.reply_text(
                     "**Unmuting all members who are muted by me...**"
@@ -135,7 +135,7 @@ def config(client, message):
                         if chat_member.restricted_by.id == (client.get_me()).id:
                             client.unban_chat_member(chat_id, chat_member.user.id)
                             time.sleep(1)
-                    sent_message.edit("✅ **UnMuted all members who are muted by me.**")
+                    sent_message.edit("✅ **Mənim elədim bütün üzvlər səssizdir.**")
                 except ChatAdminRequired:
                     sent_message.edit(
                         "❗ **I am not an admin in this chat.**\n__I can't unmute members because i am not an admin in this chat make me admin with ban user permission.__"
@@ -174,19 +174,18 @@ def config(client, message):
 __help__ = """
 *ForceSubscribe:*
 *Channel Manageer Inbuilt*
-✪ I can stop texting members of your group until they subscribe to one or more channels.
-✪ If members are not connected to your channel I can mute them and tell them to join the channel and I can mute them at the push of a button.
-*Setup*
-1) First of all add me in the group as admin with ban users permission and in the channel as admin.
-Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
+✪ Bir və ya bir neçə kanala abunə olana qədər qrup üzvlərinizə mesaj göndərməyi dayandıra bilərəm.
+✪ Üzvlər kanalınıza qoşulmayıbsa, mən onları səssizləşdirib kanala qoşulmalarını söyləyə bilərəm və bir düyməyə basaraq səssizləşdirə bilərəm.
+*Qurmaq*
+1) Hər şeydən əvvəl məni qrupa qadağan istifadəçilərinin icazəsi ilə admin və kanalda admin olaraq əlavə edin.
+Not!: yalnız qrupun yaradıcısı məni qura bilər və bunu etmədiyim təqdirdə yenidən abunə olmağa icazə verməyəcəyəm.
  
-*Commmands*
-• `/ForceSubscribe - To get the current settings.
-• `/ForceSubscribe no/off/disable - To turn of ForceSubscribe.
-• `/ForceSubscribe {channel username} - To turn on and setup the channel.
-• `/ForceSubscribe clear - To unmute all members who muted by me.
-
-Note: /FSub is an alias of /ForceSubscribe
+*Əmrlər*
+• `/ForceSubscribe - Mövcud parametrləri əldə etmək..
+• `/ForceSubscribe no/off/disable - ForceSubscribe’i çevirmək üçün.
+• `/ForceSubscribe {kanal adı} - Kanalı açmaq və qurmaq üçün.
+• `/ForceSubscribe clear - səsimi susduran bütün üzvlərin səsini çıxartmaq.
+Not: /FSub digər ləqəbidir /ForceSubscribe
  
 """
 __mod_name__ = "Subscribe"
