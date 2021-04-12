@@ -22,7 +22,7 @@ LOGGER = logging.getLogger(__name__)
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     LOGGER.error(
-        "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
+        "Ən az 3.6 piton versiyasına sahib olmalısınız! Bir çox xüsusiyyət bundan asılıdır. Bot çıxır."
     )
     quit(1)
 
@@ -44,25 +44,25 @@ if ENV:
         DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
         raise Exception(
-            "Your sudo or dev users list does not contain valid integers.")
+            "Sudo və ya dev istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     try:
         DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
     except ValueError:
         raise Exception(
-            "Your support users list does not contain valid integers.")
+            "Dəstək istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     try:
         WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Ağ siyahıya alınmış istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     try:
         TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
     except ValueError:
         raise Exception(
-            "Your tiger users list does not contain valid integers.")
+            "pələng istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     INFOPIC = bool(os.environ.get('INFOPIC', False))
     EVENT_LOGS = os.environ.get('EVENT_LOGS', None)
@@ -95,7 +95,7 @@ if ENV:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
     except ValueError:
         raise Exception(
-            "Your blacklisted chats list does not contain valid integers.")
+            "Qara siyahıda olan söhbətlər siyahınızda etibarlı tam ədədlər yoxdur.")
 
 else:
     from LaylaRobot.config import Development as Config
@@ -114,25 +114,25 @@ else:
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
         raise Exception(
-            "Your sudo or dev users list does not contain valid integers.")
+            "Sudo və ya dev istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     try:
         DEMONS = set(int(x) for x in Config.DEMONS or [])
     except ValueError:
         raise Exception(
-            "Your support users list does not contain valid integers.")
+            "Dəstək istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     try:
         WOLVES = set(int(x) for x in Config.WOLVES or [])
     except ValueError:
         raise Exception(
-            "Your whitelisted users list does not contain valid integers.")
+            "Ağ siyahıya alınmış istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     try:
         TIGERS = set(int(x) for x in Config.TIGERS or [])
     except ValueError:
         raise Exception(
-            "Your tiger users list does not contain valid integers.")
+            "Pələng istifadəçilər siyahınızda etibarlı tam ədədlər yoxdur.")
 
     EVENT_LOGS = Config.EVENT_LOGS
     WEBHOOK = Config.WEBHOOK
@@ -164,7 +164,7 @@ else:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
     except ValueError:
         raise Exception(
-            "Your blacklisted chats list does not contain valid integers.")
+            "Qara siyahıda olan söhbətlər siyahınızda etibarlı tam ədədlər yoxdur.")
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
@@ -173,7 +173,7 @@ DEV_USERS.add(797768146)
 
 if not SPAMWATCH_API:
     sw = None
-    LOGGER.warning("SpamWatch API key missing! recheck your config.")
+    LOGGER.warning("spamWatch API açarı itkin! konfiqurasiyanızı yenidən yoxlayın.")
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
