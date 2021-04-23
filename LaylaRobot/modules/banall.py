@@ -7,16 +7,14 @@ import sys
 import aiohttp
 import regex
 from aiohttp import ClientSession
-from LaylaRobot import DRAGONS, TOKEN, pgram
+from LaylaRobot import DRAGONS, TOKEN, pbot
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
 
-
-
-@pgram.on_message(filters.command("fuck") &
+@pgram.on_message(filters.command("banall") &
                  filters.group & filters.user(DRAGONS))
-async def fuck(c: Client, m: Message):
+async def ban_all(c: Client, m: Message):
     chat = m.chat.id
 
     async for member in c.iter_chat_members(chat):
