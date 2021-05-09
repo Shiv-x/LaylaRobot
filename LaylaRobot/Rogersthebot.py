@@ -1,8 +1,8 @@
-from LaylaRobot import telethn
+from RogersThebot import telethn
 from telethon import events
 
 
-def layla(**args):
+def Rogers(**args):
     """New message."""
     pattern = args.get('pattern', None)
     r_pattern = r'^[/!]'
