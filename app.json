@@ -1,7 +1,11 @@
 {
       "name": "Layla Robot",
       "description": "An Anime themed Telegram group management bot.",
-      "keywords": [
+     "logo": "https://telegra.ph/file/b13a9a6a858621356d925.jpg",
+
+       
+
+       "keywords": [
          "telegram",
          "anime",
          "group",
