@@ -195,4 +195,4 @@ The bot is based on the original work done by [PaulSonOfLars](https://github.com
 
 
 
-## [D3_krish](http://t.me/D3_krish)
+## [OWNER HERO](http://t.me/HEROGAMERS1)
