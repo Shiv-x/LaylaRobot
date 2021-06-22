@@ -87,7 +87,7 @@ buttons = [
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="layla_"),
         InlineKeyboardButton(
-            text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/kannada_friends_chatting"
+            text="ꜱᴜᴘᴘᴏʀᴛ", url=f"Raksha"
         ),
     ],
     [
@@ -105,7 +105,7 @@ buttons = [
 HELP_STRINGS = """
 `Hi.. I'M` Creator Raksha
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Powered by :- [kannada friends chatting]{t.me/kannada_friends_chatting}"""
+Powered by :- Raksha"""
 
 layla_IMG = "https://telegra.ph/file/bc5cc580de7963cbd14b4.jpg"
 
