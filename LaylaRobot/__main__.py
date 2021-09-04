@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello, I'M Layla
+Hello, I'M [Layla](https://telegra.ph/file/524b78577a42b02b2f074.jpg)
 `ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ` /help
 Maintained by @HEROGAMERS1 ❤
 """
